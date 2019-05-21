@@ -1,0 +1,72 @@
+
+# html lang
+language: zh-Hans
+
+# main menu navigation
+menu:
+  home: /
+  post:
+      categories: /categories
+      archives: /archives
+      tags: /tags
+  Papers: /paper
+  project: /project
+  activity: /activity
+  search: /search
+  # about: http://www.fooying.com
+  # rss: /atom.xml
+
+# Miscelaneous
+favicon: footer-logo.png
+logo:
+
+share:
+    show: false
+    img:
+    img_alt:
+    tip_text: test
+
+# stylesheets loaded in the <head>
+stylesheets:
+# - /css/normalize.css
+- //cdn.bootcss.com/pure/1.0.0/pure-min.css
+- /css/xoxo.css
+
+# baidu url js push
+baidu_url_js_push: true
+
+# scripts loaded in the end of the body
+scripts:
+#- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
+#- /js/xoxo.js
+
+# switch
+show_excerpt: true
+show_date: true
+
+#footer
+index_page: http://www.fooying.com
+main_site: http://www.fooying.com
+github: https://github.com/fooying
+links_url: /links
+
+# 友情链接
+links:
+  Fooying: https://www.fooying.com
+
+# project
+projects:
+  hexo-theme-xoxo-plus:
+    url: https://github.com/fooying/hexo-theme-xoxo-plus
+    descript: a hexo theme
+
+# activitys
+activitys:
+  腾讯课堂课程《漏洞攻防与企业安全实例讲解》:
+    date: 2018-07-10
+    url: https://ke.qq.com/course/342390?tuin=49018ed
+    type: 课程
+
+# papers
+papers:
+    原创翻译：给开发者的终极XSS防护备忘录: https://github.com/fooying/Papers/blob/master/给开发者的终极XSS防护备忘录.pdf

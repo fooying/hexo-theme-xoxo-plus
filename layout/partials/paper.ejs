@@ -1,0 +1,13 @@
+<section class="post page archives">
+  <h3 class="archive-year-wrap"><%= __('Papers')%></h3>
+  <div class="archives">
+    <% Object.keys(theme.papers).forEach(function(key) { %>
+      <div class="archive">
+        <a class="post-go" target="_blank" style="color:#202020" href="<%=theme.papers[key]%>">
+          <%= __(key)%>
+        </a>
+      </div>
+    <% }); %>
+    <p style="color:#999;font-size:14px;margin-top: 30px;">整理更新中,所有Paper归档：<a class="post-go" target="_blank" style="color:#202020" href="https://github.com/fooying/Papers">https://github.com/fooying/Papers</a></p>
+  </div>
+</section>

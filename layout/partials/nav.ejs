@@ -1,0 +1,38 @@
+<nav class="home-menu pure-menu pure-menu-horizontal">
+  <a class="pure-menu-heading" href="/">
+    <% if(theme.logo) {%>
+      <img class="avatar" src="<%=config.url%>/images/<%=theme.logo%>">
+    <% } %>
+    <span class="title" style="text-transform:none"><%=config.title%></span>
+  </a>
+
+  <ul class="pure-menu-list clearfix">
+      <% Object.keys(theme.menu).forEach(function(key) { %>
+          <% if (_.isPlainObject(theme.menu[key])) { %>
+            <% if (_.indexOf(Object.values(theme.menu[key]), '/'+page.path.split('/')[0]) != -1) { %>
+              <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover actived">
+            <% } else { %>
+              <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <% } %>
+              <a href="#" id="<%=key%>" class="pure-menu-link"><%= __(key)%></a>
+              <ul class="pure-menu-children">
+              <% Object.keys(theme.menu[key]).forEach(function(ch_key) { %>
+                  <% if (theme.menu[key][ch_key] === '/'+page.path.split('/')[0]) { %>
+                    <li class="pure-menu-item"><a href="<%=theme.menu[key][ch_key]%>" class="pure-menu-link"><%= __(ch_key)%></a></li>
+                  <% } else { %>
+                    <li class="pure-menu-item"><a href="<%=theme.menu[key][ch_key]%>" style="color:#202020;" class="pure-menu-link"><%= __(ch_key)%></a></li>
+                  <% } %>
+              <% }); %>
+              </ul>
+            </li>
+          <% } else { %>
+            <% if ((is_home() && key==='home') || (is_archive() && key==='archives') || page.type === key) { %>
+              <li class="pure-menu-item actived"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
+            <% } else { %>
+              <li class="pure-menu-item"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
+            <% } %>
+          <% } %>
+      <% }); %>
+  </ul>
+   
+</nav>

@@ -1,0 +1,25 @@
+<article class="post page" id="page">
+  <header class="post-header text-center">
+  </header>
+  <div class="post-content">
+    <% if (page.type === "tags"){ %>
+          <% if (site.tags.length){ %>
+                <%- list_tags() %>
+          <% } %>
+      <% } else if (page.type === "categories") { %>
+        <%- list_categories(site.categories) %>
+      <% } else if (page.type === "links") { %>
+        <%- partial('partials/links') %>
+      <% } else if (page.type === "activity") { %>
+        <%- partial('partials/activity') %>
+      <% } else if (page.type === "project") { %>
+        <%- partial('partials/project') %>
+      <% } else if (page.type === "paper") { %>
+        <%- partial('partials/paper') %>
+      <% } else if (page.type === "search") { %>
+        <%- partial('partials/search') %>
+      <% } else { %>
+        <%-page.content%>
+      <% } %>
+  </div>
+</article>
