@@ -38,9 +38,9 @@ share:
 ```
 4、增加logo配置，区分logo和favicon配置
 ```
-//模板_config.yml中配置
-favicon: footer-logo.png #favicon配置
-logo: #logo配置
+# 模板_config.yml中配置
+favicon: footer-logo.png # favicon配置
+logo: # logo配置
 ```
 
 ### _config.yml 配置说明
@@ -69,9 +69,9 @@ projects:
 ```
 activitys:
   title1:
-    date: 2018-09-10 //时间，只能YYYY-MM-DD
+    date: 2018-09-10 # 时间，只能YYYY-MM-DD
     url: url
-    type: 采访 //类型，可自定义
+    type: 采访 # 类型，可自定义
   ...
 ```
 
