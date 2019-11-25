@@ -42,6 +42,20 @@ share:
 favicon: footer-logo.png # favicon配置
 logo: # logo配置
 ```
+5、新增gitalk评论支持
+```
+# 模板_config.yml中配置
+# disqus同时配置的情况下，优先选择模板中配置的评论系统
+# clientID、clientSecret的生成请访问申请 https://github.com/settings/applications/new
+comment_extend:
+    gitalk:
+        enable: true
+        owner: Github username
+        repo: issue repo name
+        admin: github username
+        clientID: xxx
+        clientSecret: xxx
+```
 
 ### _config.yml 配置说明
 相关示例可参考项目中_config.yml文件

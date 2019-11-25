@@ -35,6 +35,17 @@ stylesheets:
 # baidu url js push
 baidu_url_js_push: true
 
+
+# comment extend, support gialk
+comment_extend:
+    gitalk:
+        enable: true
+        owner: Github username
+        repo: issue repo name
+        admin: github username
+        clientID: xxx
+        clientSecret: xxx
+
 # scripts loaded in the end of the body
 scripts:
 #- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js

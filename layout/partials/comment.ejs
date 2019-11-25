@@ -1,4 +1,19 @@
-<% if (config.disqus_shortname){ %>
+<% if (theme.comment_extend.gitalk.enable){ %>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <div id="gitalk-container"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+            clientID: '<%= theme.comment_extend.gitalk.clientID %>',
+            clientSecret: '<%= theme.comment_extend.gitalk.clientSecret %>',
+            id: window.location.pathname,
+            repo: '<%= theme.comment_extend.gitalk.repo %>',
+            owner: '<%= theme.comment_extend.gitalk.owner %>',
+            admin: '<%= theme.comment_extend.gitalk.admin %>'
+        })
+        gitalk.render('gitalk-container')
+    </script>
+<% } else if (config.disqus_shortname){ %>
   <section class="disqus-comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
