@@ -18,3 +18,15 @@ function bscallOut (args, content) {
 }
 
 hexo.extend.tag.register('note', bscallOut, {ends: true});
+hexo.extend.helper.register('isPlainObject',function(value) {
+  if (!value || typeof value !== 'object' || ({}).toString.call(value) != '[object Object]' ) {
+      return false;
+  }
+  var proto = Object.getPrototypeOf(value);
+  if (proto === null) {
+      return true;
+  }
+  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  return typeof Ctor == 'function' && Ctor instanceof Ctor && Function.prototype.toString.call(Ctor) === Function.prototype.toString.call(Object);
+}
+);
