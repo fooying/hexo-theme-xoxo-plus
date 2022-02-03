@@ -8,8 +8,8 @@
 
   <ul class="pure-menu-list clearfix">
       <% Object.keys(theme.menu).forEach(function(key) { %>
-          <% if (_.isPlainObject(theme.menu[key])) { %>
-            <% if (_.indexOf(Object.values(theme.menu[key]), '/'+page.path.split('/')[0]) != -1) { %>
+          <% if (isPlainObject(theme.menu[key])) { %>
+            <% if (Object.values(theme.menu[key]).indexOf('/'+page.path.split('/')[0]) != -1) { %>
               <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover actived">
             <% } else { %>
               <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
