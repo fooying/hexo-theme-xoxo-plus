@@ -36,7 +36,8 @@ stylesheets:
 baidu_url_js_push: true
 
 
-# comment extend, support gialk
+# comment extend, support gialk, giscus
+# giscus https://giscus.app/zh-CN
 comment_extend:
     gitalk:
         enable: true
@@ -45,6 +46,11 @@ comment_extend:
         admin: github username
         clientID: xxx
         clientSecret: xxx
+    giscus:
+        enable: false
+        repo: data-repo
+        repoId: data-repo-id
+        dataCategoryId: data-category-id 
 
 # scripts loaded in the end of the body
 scripts:
