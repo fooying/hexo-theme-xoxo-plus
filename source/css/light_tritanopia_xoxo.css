@@ -99,4 +99,4 @@ main .gsc-loading-image {
 .input-contrast {background-color: #ffffff}
 .color-bg-tertiary {background-color: #ffffff}
 .color-box-border-info{border: 1px solid #e3e3e3}
-.gsc-social-reaction-summary-item.has-reacted {background-color: var(--color-canvas-subtle,var(--color-bg-secondary));border-color: var(--color-border-default,var(--color-border-primary));color: var(--color-fg-muted,var(--color-text-secondary)))}
+.gsc-social-reaction-summary-item.has-reacted {background-color: var(--color-canvas-subtle,var(--color-bg-secondary));border-color: var(--color-border-default,var(--color-border-primary));color: var(--color-fg-muted,var(--color-text-secondary))}
